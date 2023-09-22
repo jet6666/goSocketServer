@@ -1,0 +1,7 @@
+
+
+
+ nohup /datat2/nsq-0.3.8/bin/nsqd --lookupd-tcp-address=127.0.0.1:5160 --http-address=0.0.0.0:5151 --tcp-address=0.0.0.0:5150 --data-path=/data/nsq2/ &
+
+  nohup /datat2/nsq-0.3.8/bin/nsqadmin --lookupd-http-address=127.0.0.1:5161 --http-address=0.0.0.0:5171  &
+ nohup /datat2/nsq-0.3.8/bin/nsqlookupd --http-address=0.0.0.0:5161 --tcp-address=0.0.0.0:5160 &
