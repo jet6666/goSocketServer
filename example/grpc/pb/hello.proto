@@ -1,0 +1,26 @@
+syntax = "proto3";
+option go_package ="goSocketServer/example/grpc/pb";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.helloworld";
+option java_outer_classname = "HelloWorldProto";
+
+package pb;
+
+service Chat {
+  rpc Send(msgRequest) returns (msgReply) {}
+  rpc GetHistory( emptyRequest) returns (msgListReply) {}
+}
+message emptyRequest {
+}
+message msgRequest {
+  string name = 1;
+}
+
+message msgReply {
+  string message = 1;
+}
+
+message msgListReply {
+ repeated  string list = 1;
+}
